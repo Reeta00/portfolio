@@ -1,57 +1,55 @@
 function Header() {
-  return (
-    <header className="hero">
-      <div className="container-fluid px-4 px-lg-5">
-        <div className="row align-items-center">
+    return (
+        <header className="hero">
+            <div className="container-fluid px-4 px-lg-5">
+                <div className="row align-items-center">
 
-         
-          <div className="col-lg-6">
-            <div className="hero-content">
 
-              <p className="hero-intro">
-                Hi, I'm
-              </p>
+                    <div className="col-md-6">
+                        <div className="hero-content">
 
-              <h1>
-                Reeta Valtamäki.
-              </h1>
+                            <p className="hero-intro">
+                                Hi, I'm
+                            </p>
 
-              <h2>
-                Aspiring software developer & UX/UI designer
-              </h2>
+                            <h1>
+                                Reeta Valtamäki.
+                            </h1>
 
-              <p className="hero-description">
-                I design and build thoughtful digital experiences
-                that are intuitive, accessible and user centered.
-              </p>
+                            <h2>
+                                Aspiring UX/UI Designer & Software Developer | 3rd-year IT Student
+                            </h2>
 
-              <a href="#work" className="hero-button">
-                View my work
-                <span>↓</span>
-              </a>
+                            <p className="hero-description">
+                                I’m a baker turned IT student who still loves making things, just with different tools. I enjoy combining creativity and logical problem solving as I learn to turn ideas from everyday life into practical, playful or simply fun projects through design and code.
+                            </p>
 
+                            <a href="#work" className="hero-button">
+                                View my work ↓
+                            </a>
+
+                        </div>
+                    </div>
+
+
+                    <div className="col-md-6">
+                        <div className="hero-image-container">
+
+                            <div className="hero-dots"></div>
+
+                            <img
+                                src="/src/assets/profiilikuvaReeta.png"
+                                alt="Reetan profiilikuva"
+                                className="hero-image"
+                            />
+
+                        </div>
+                    </div>
+
+                </div>
             </div>
-          </div>
-
-          
-          <div className="col-lg-6">
-            <div className="hero-image-container">
-
-              <div className="hero-dots"></div>
-
-              <img
-                src="/src/assets/profiilikuvaReeta.png"
-                alt="Reetan profiilikuva"
-                className="hero-image"
-              />
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </header>
-  );
+        </header>
+    );
 }
 
 export default Header;
