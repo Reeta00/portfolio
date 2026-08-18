@@ -1,0 +1,256 @@
+
+.portfolio-navbar {
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid rgba(45, 75, 55, 0.08);
+
+}
+
+.portfolio-navbar .navbar-social {
+  display: flex;
+  align-items: center;
+  color: #777;
+  font-size: 30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.portfolio-navbar .navbar-social:hover {
+  color: #4d8f68;
+  transform: translateY(-2px);
+}
+
+.portfolio-navbar .container-fluid {
+  min-height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.portfolio-navbar .navbar-brand {
+  margin: 0;
+  color: #202326;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.portfolio-navbar .navbar-brand:hover {
+  color: #4d8f68;
+}
+
+.desktop-nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.portfolio-navbar .nav-link {
+  position: relative;
+  padding: 8px 2px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    color 0.2s ease;
+}
+
+.portfolio-navbar .nav-link:hover {
+  color: #4d8f68;
+}
+
+.portfolio-navbar .nav-link.active {
+  color: #202326;
+  font-weight: 600;
+}
+
+.portfolio-navbar .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  width: 18px;
+  height: 2px;
+  margin: auto;
+  border-radius: 999px;
+  background: #4d8f68;
+}
+
+.contact-button {
+  background-color: #4d8f68 !important;
+  border-color: #4d8f68 !important;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: #3f7957 !important;
+  border-color: #3f7957 !important;
+  transform: translateY(-1px);
+}
+
+
+.contact-modal .modal-content {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.contact-modal .modal-header {
+  padding: 28px 30px 15px;
+  border-bottom: none;
+}
+
+.contact-modal .modal-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.contact-modal .modal-body {
+  padding: 10px 30px 25px;
+}
+
+.contact-intro {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #f7f9f7;
+  color: #222;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contact-item:hover {
+  background: #edf4ef;
+  transform: translateX(3px);
+}
+
+.contact-item i {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4d8f68;
+  color: white;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.contact-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-item span {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.contact-item strong {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.contact-modal .modal-footer {
+  padding: 10px 30px 25px;
+  border-top: none;
+}
+
+.contact-close {
+  background: transparent !important;
+  border: 1px solid #ddd !important;
+  color: #555 !important;
+  border-radius: 8px;
+  padding: 8px 20px;
+}
+
+.contact-close:hover {
+  background: #f5f5f5 !important;
+}
+
+.mobile-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  color: #202326;
+  background: #fff;
+  border: 1px solid rgba(45, 75, 55, 0.1);
+  border-radius: 50%;
+  font-size: 21px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(45, 75, 55, 0.05);
+}
+
+.mobile-menu:hover {
+  color: #fff;
+  background: #4d8f68;
+  transform: translateY(-2px);
+}
+
+.mobile-menu:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 991px) {
+
+  .portfolio-navbar .container-fluid {
+    min-height: 70px;
+  }
+
+  .desktop-nav {
+    gap: 22px !important;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .portfolio-navbar .container-fluid {
+    min-height: 64px;
+  }
+
+  .portfolio-navbar .navbar-brand {
+    font-size: 14px;
+    letter-spacing: 1.3px;
+  }
+
+  .mobile-menu {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
