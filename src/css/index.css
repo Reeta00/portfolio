@@ -9,7 +9,7 @@
 }
 
 .hero-content {
-  padding: 20px 0;
+  padding-left: 60px;
   transform: none;
   max-width: 720px;
 }
@@ -24,7 +24,7 @@
 }
 
 .hero h1 {
-  font-size: clamp(65px, 5vw, 85px);
+  font-size: clamp(65px, 4vw, 85px);
   line-height: 0.92;
   letter-spacing: -5px;
   margin: 0;
@@ -36,7 +36,7 @@
 .hero h2 {
   margin-top: 28px;
   margin-bottom: 0;
-  font-size: 21px;
+  font-size: 20px;
   line-height: 1.4;
   font-weight: 500;
   color: #17191a;
@@ -79,11 +79,11 @@
 
 .hero-image-container {
   position: relative;
-  min-height: 560px;
+  min-height: 520px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-left: -40px;
+  margin-left: -60px;
 }
 
 .hero-image-container::before {
@@ -104,8 +104,8 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 540px;
-  max-height: 530px;
+  max-width: 520px;
+  max-height: 500px;
   object-fit: contain;
   transform: translateX(-15px);
 }

@@ -71,8 +71,9 @@ function Navbar() {
               <Modal.Body>
                 <div className="contact-content">
                   <p className="contact-intro">
-                    I’m looking for my first opportunity in IT to apply my knowledge and grow professionally. I’m also open to writing my final thesis in collaboration with a company. I’d love to connect!
+                    I’m looking for my first opportunity in IT where I can put my skills into practice, keep learning and grow professionally. I’m also open to doing my final thesis in collaboration with a company.
                   </p>
+                  <p className='connect-p'>I’d love to connect!</p>
 
                   <div className="contact-details">
 

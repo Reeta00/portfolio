@@ -21,7 +21,7 @@ function Header() {
                             </h2>
 
                             <p className="hero-description">
-                                I’m a baker turned IT student who still loves making things, just with different tools. I enjoy combining creativity and logical problem solving as I learn to turn ideas from everyday life into practical, playful or simply fun projects through design and code.
+                                I’m a baker turned IT student who still loves making things, just with different tools. I enjoy combining creativity and logical problem solving as I learn to turn ideas from everyday life into practical, playful or simply fun projects with design and code.
                             </p>
 
                             <a href="#work" className="hero-button">
