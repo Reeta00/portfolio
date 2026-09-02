@@ -38,7 +38,7 @@ function Header() {
                             <div className="hero-dots"></div>
 
                             <img
-                                src="/src/assets/profiilikuvaReeta.png"
+                                src="./src/assets/profiilikuvaReeta.png"
                                 alt="Reetan profiilikuva"
                                 className="hero-image"
                             />

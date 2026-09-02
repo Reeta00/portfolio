@@ -65,8 +65,8 @@ function Projects() {
       category: "HTML • CSS • JavaScript",
       description:
         "A simple interactive counter I built to practice JavaScript.",
-      image: "/src/assets/rubberduck.png",
-      video: "/src/assets/RubberDuck.mp4"
+      image: "./src/assets/rubberduck.png",
+      video: "./src/assets/RubberDuck.mp4"
     },
 
     {
@@ -74,8 +74,8 @@ function Projects() {
       category: "React JS • Node.js • MySQL",
       description:
         "A full-stack bookstore where I focused on the database, admin and login pages and overall UI design.",
-      image: "/src/assets/Novellinurkka.png",
-      video: "/src/assets/FirstProject.mp4"
+      image: "./src/assets/Novellinurkka.png",
+      video: "./src/assets/FirstProject.mp4"
     },
 
     {
@@ -83,8 +83,8 @@ function Projects() {
       category: "React Native • Expo",
       description:
         "A school project featuring a mobile Yahtzee-style game built with React Native and Expo.",
-      image: "/src/assets/yahtzee.png",
-      video: "/src/assets/miniYahzee.mp4"
+      image: "./src/assets/yahtzee.png",
+      video: "./src/assets/miniYahzee.mp4"
     },
 
     {
@@ -92,8 +92,8 @@ function Projects() {
       category: "HTML • CSS • JavaScript • API",
       description:
         "A weather application that fetches and displays live weather data.",
-      image: "/src/assets/WeatherApp.png",
-      video: "/src/assets/WeatherApp.mp4"
+      image: "./src/assets/WeatherApp.png",
+      video: "./src/assets/WeatherApp.mp4"
     },
 
     {
@@ -101,8 +101,8 @@ function Projects() {
       category: "React Native • Expo",
       description:
         "A simple mobile application for browsing and tracking exercises.",
-      image: "/src/assets/exercise.png",
-      video: "/src/assets/ExerciseApp.mp4"
+      image: "./src/assets/exercise.png",
+      video: "./src/assets/ExerciseApp.mp4"
     }
   ];
 
@@ -195,21 +195,21 @@ function Projects() {
 
           <div className="wireframe-card">
             <img
-              src="/src/assets/Figmaprojekteja.png"
+              src="./src/assets/Figmaprojekteja.png"
               alt="Figma projects and wireframes"
             />
           </div>
 
           <div className="wireframe-card">
             <img
-              src="/src/assets/ShopFigma.png"
+              src="./src/assets/ShopFigma.png"
               alt="Shop website wireframe"
             />
           </div>
 
           <div className="wireframe-card">
             <img
-              src="/src/assets/TravelSite.png"
+              src="./src/assets/TravelSite.png"
               alt="Application wireframe"
             />
           </div>
