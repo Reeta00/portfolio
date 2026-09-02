@@ -11,7 +11,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-md portfolio-navbar">
       <div className="container-fluid px-4 px-lg-5">
 
-        <a href="portfolio" className="navbar-brand">
+        <a className="navbar-brand">
           PORTFOLIO
         </a>
 

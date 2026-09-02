@@ -41,6 +41,7 @@
 
 .portfolio-navbar .navbar-brand:hover {
   color: #4d8f68;
+  cursor: default;
 }
 
 .desktop-nav {

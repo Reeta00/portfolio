@@ -214,21 +214,21 @@ function Projects() {
 
           <div className="wireframe-card">
             <img
-              src="./src/assets/Figmaprojekteja.png"
+              src={figmaProjects}
               alt="Figma projects and wireframes"
             />
           </div>
 
           <div className="wireframe-card">
             <img
-              src="./src/assets/ShopFigma.png"
+              src={shopFigma}
               alt="Shop website wireframe"
             />
           </div>
 
           <div className="wireframe-card">
             <img
-              src="./src/assets/TravelSite.png"
+              src={travelSite}
               alt="Application wireframe"
             />
           </div>
