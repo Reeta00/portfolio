@@ -1,5 +1,24 @@
 import { useRef } from "react";
 
+import rubberduck from "/src/assets/rubberduck.png";
+import rubberDuckVideo from "/src/assets/RubberDuck.mp4";
+
+import novellinurkka from "/src/assets/Novellinurkka.png";
+import firstProjectVideo from "/src/assets/FirstProject.mp4";
+
+import yahtzee from "/src/assets/yahtzee.png";
+import miniYahtzeeVideo from "/src/assets/miniYahzee.mp4";
+
+import weatherApp from "/src/assets/WeatherApp.png";
+import weatherAppVideo from "/src/assets/WeatherApp.mp4";
+
+import exercise from "/src/assets/exercise.png";
+import exerciseAppVideo from "/src/assets/ExerciseApp.mp4";
+
+import figmaProjects from "/src/assets/Figmaprojekteja.png";
+import shopFigma from "/src/assets/ShopFigma.png";
+import travelSite from "/src/assets/TravelSite.png";
+
 function ProjectCard({ project }) {
   const videoRef = useRef(null);
 
@@ -65,8 +84,8 @@ function Projects() {
       category: "HTML • CSS • JavaScript",
       description:
         "A simple interactive counter I built to practice JavaScript.",
-      image: "./src/assets/rubberduck.png",
-      video: "./src/assets/RubberDuck.mp4"
+      image: rubberduck,
+    video: rubberDuckVideo
     },
 
     {
@@ -74,8 +93,8 @@ function Projects() {
       category: "React JS • Node.js • MySQL",
       description:
         "A full-stack bookstore where I focused on the database, admin and login pages and overall UI design.",
-      image: "./src/assets/Novellinurkka.png",
-      video: "./src/assets/FirstProject.mp4"
+      image: novellinurkka,
+    video: firstProjectVideo
     },
 
     {
@@ -83,8 +102,8 @@ function Projects() {
       category: "React Native • Expo",
       description:
         "A school project featuring a mobile Yahtzee-style game built with React Native and Expo.",
-      image: "./src/assets/yahtzee.png",
-      video: "./src/assets/miniYahzee.mp4"
+      image: yahtzee,
+    video: miniYahtzeeVideo
     },
 
     {
@@ -92,8 +111,8 @@ function Projects() {
       category: "HTML • CSS • JavaScript • API",
       description:
         "A weather application that fetches and displays live weather data.",
-      image: "./src/assets/WeatherApp.png",
-      video: "./src/assets/WeatherApp.mp4"
+      image: weatherApp,
+    video: weatherAppVideo
     },
 
     {
@@ -101,8 +120,8 @@ function Projects() {
       category: "React Native • Expo",
       description:
         "A simple mobile application for browsing and tracking exercises.",
-      image: "./src/assets/exercise.png",
-      video: "./src/assets/ExerciseApp.mp4"
+      image: exercise,
+    video: exerciseAppVideo
     }
   ];
 

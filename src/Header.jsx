@@ -1,3 +1,5 @@
+import profileImage from "/src/assets/profiilikuvaReeta.png";
+
 function Header() {
     return (
         <header className="hero">
@@ -38,7 +40,7 @@ function Header() {
                             <div className="hero-dots"></div>
 
                             <img
-                                src="./src/assets/profiilikuvaReeta.png"
+                                src={profileImage}
                                 alt="Reetan profiilikuva"
                                 className="hero-image"
                             />
