@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import data from "/data.js"
+import data from "../../data.js";
 
 
 import figmaProjects from "/src/assets/Figmaprojekteja.png";

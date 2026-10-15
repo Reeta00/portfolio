@@ -59,3 +59,5 @@
     video: exerciseAppVideo
     }
   ];
+
+  export default data;
