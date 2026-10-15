@@ -11,14 +11,20 @@
   border: 1px solid rgba(45, 75, 55, 0.08);
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(45, 75, 55, 0.05);
+
+  position: relative;
+  z-index: 1;
+  transform: scale(1);
+  transform-origin: center center;
   transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 35px rgba(45, 75, 55, 0.10);
+  transform: scale(1.12);
+  z-index: 10;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -148,16 +154,12 @@
   font-size: 15px;
 }
 
-
-
 .carousel-wrapper {
   position: relative;
   width: calc(100% - 150px);
   max-width: 1270px;
   margin: 0 auto;
 }
-
-
 
 .work-carousel {
   display: flex;
@@ -172,12 +174,14 @@
   scroll-behavior: smooth;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
+
+    overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .work-carousel::-webkit-scrollbar {
   display: none;
 }
-
 
 .carousel-button {
   position: absolute;
@@ -218,30 +222,34 @@
   right: -60px;
 }
 
-
-
 .wireframe-section {
-  margin-top: 70px;
-  padding: 0 75px 60px;
+  width: calc(100% - 150px);
+  max-width: 1270px;
+  margin: 45px auto 0;
+  padding-bottom: 50px;
+  box-sizing: border-box;
 }
 
-
 .wireframe-heading {
-  margin-bottom: 24px;
+  max-width: 600px;
+  margin-bottom: 22px;
 }
 
 .wireframe-heading span {
-  display: inline-block;
-  margin-bottom: 6px;
+  display: block;
+  margin-bottom: 8px;
   color: #4d8f68;
   font-size: 13px;
   font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .wireframe-heading h2 {
   margin: 0 0 8px;
   color: #202326;
   font-size: 32px;
+  line-height: 1.2;
   letter-spacing: -1px;
 }
 
@@ -249,124 +257,137 @@
   margin: 0;
   color: #666;
   font-size: 15px;
+  line-height: 1.65;
 }
 
 
 .wireframe-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  overflow: visible;
 }
-
 
 .wireframe-card {
   position: relative;
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-  border-radius: 18px;
-  background: #f4f6f4;
-  border: 1px solid rgba(45, 75, 55, 0.08);
-  box-shadow: 0 6px 20px rgba(45, 75, 55, 0.05);
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-origin: center center;
 
+  height: 320px;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(45, 75, 55, 0.10);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(45, 75, 55, 0.05);
 }
 
-
-
-
+.wireframe-card:hover {
+  transform: scale(1.2);
+  z-index: 10;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
 
 .wireframe-card img {
   display: block;
   width: 100%;
   height: 100%;
+  padding: 4px;
+  box-sizing: border-box;
   object-fit: contain;
-
 }
 
-
-
-
+@media (hover: hover) and (pointer: fine) {
+  .wireframe-card:hover {
+    transform: scale(1.2);
+    z-index: 10;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  }
+}
 
 @media (max-width: 991px) {
-
-  .projects-heading {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-
+  .projects-heading,
+  .carousel-wrapper,
   .wireframe-section {
-    padding: 0 40px 60px;
+    width: calc(100% - 80px);
   }
 
-  .wireframe-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-
-
-@media (max-width: 767px) {
-
-  .projects-heading {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-  }
-
-  .projects-title-row {
-    gap: 12px;
-  }
-
-  .projects-heading h2 {
-    font-size: 27px;
-  }
-
-  .projects-heading p {
-    font-size: 14px;
-  }
-
-
-  .carousel-button {
-    width: 36px;
-    height: 36px;
-    font-size: 15px;
+  /*Project carousel*/
+  .project-card {
+    flex: 0 0 340px;
+    width: 340px;
+    min-width: 340px;
   }
 
   .carousel-button-left {
-    left: 6px;
+    left: -38px;
   }
 
   .carousel-button-right {
-    right: 6px;
+    right: -38px;
   }
 
+  /*Wireframes*/
+  .wireframe-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
+  .wireframe-card {
+    height: 300px;
+  }
+}
+
+/*Mobile*/
+@media (max-width: 600px) {
+  .projects-heading,
+  .carousel-wrapper,
   .wireframe-section {
-    margin-top: 50px;
-    padding: 0 20px 40px;
+    width: calc(100% - 32px);
   }
 
-  .wireframe-heading {
-    margin-bottom: 20px;
+  /*Project carousel*/
+  .project-card {
+    flex: 0 0 280px;
+    width: 280px;
+    min-width: 280px;
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  .carousel-button {
+    width: 34px;
+    height: 34px;
+    top: 42%;
+    font-size: 14px;
+  }
+
+  .carousel-button-left {
+    left: -16px;
+  }
+
+  .carousel-button-right {
+    right: -16px;
+  }
+
+  /*Wireframes*/
+  .wireframe-section {
+    margin-top: 35px;
+    padding-bottom: 35px;
   }
 
   .wireframe-heading h2 {
-    font-size: 26px;
-  }
-
-  .wireframe-heading p {
-    font-size: 13px;
+    font-size: 27px;
   }
 
   .wireframe-grid {
     grid-template-columns: 1fr;
-
     gap: 16px;
   }
 
   .wireframe-card {
-    aspect-ratio: 16 / 10;
-    border-radius: 14px;
+    height: 320px;
   }
-
 }

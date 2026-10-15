@@ -19,7 +19,7 @@ function Header() {
                             </h1>
 
                             <h2>
-                                Aspiring Software Developer & UX/UI Designer | 3rd-year ITC Student
+                                Aspiring Software Developer & UX/UI Designer | Final Year ITC Student
                             </h2>
 
                             <p className="hero-description">

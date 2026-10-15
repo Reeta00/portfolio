@@ -1,25 +1,12 @@
 import { useRef } from "react";
+import data from "/data.js"
 
-import rubberduck from "/src/assets/rubberduck.png";
-import rubberDuckVideo from "/src/assets/RubberDuck.mp4";
-
-import novellinurkka from "/src/assets/Novellinurkka.png";
-import firstProjectVideo from "/src/assets/FirstProject.mp4";
-
-import yahtzee from "/src/assets/yahtzee.png";
-import miniYahtzeeVideo from "/src/assets/miniYahzee.mp4";
-
-import weatherApp from "/src/assets/WeatherApp.png";
-import weatherAppVideo from "/src/assets/WeatherApp.mp4";
-
-import exercise from "/src/assets/exercise.png";
-import exerciseAppVideo from "/src/assets/ExerciseApp.mp4";
 
 import figmaProjects from "/src/assets/Figmaprojekteja.png";
 import shopFigma from "/src/assets/ShopFigma.png";
 import travelSite from "/src/assets/TravelSite.png";
 
-function ProjectCard({ project }) {
+function ProjectCard({ data }) {
   const videoRef = useRef(null);
 
   const handleMouseEnter = () => {
@@ -38,7 +25,7 @@ function ProjectCard({ project }) {
 
   return (
     <a
-      href={project.link}
+      href={data.link}
       className="project-card"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -46,13 +33,13 @@ function ProjectCard({ project }) {
       <div className="project-image">
 
         <img
-          src={project.image}
-          alt={project.title}
+          src={data.image}
+          alt={data.title}
         />
 
         <video
           ref={videoRef}
-          src={project.video}
+          src={data.video}
           muted
           loop
           playsInline
@@ -62,11 +49,11 @@ function ProjectCard({ project }) {
 
       <div className="project-info">
 
-        <span>{project.category}</span>
+        <span>{data.category}</span>
 
-        <h3>{project.title}</h3>
+        <h3>{data.title}</h3>
 
-        <p>{project.description}</p>
+        <p>{data.description}</p>
 
       </div>
     </a>
@@ -78,52 +65,7 @@ function Projects() {
 
   const carouselRef = useRef(null);
 
-  const projects = [
-    {
-      title: "Counter App",
-      category: "HTML • CSS • JavaScript",
-      description:
-        "A simple interactive counter I built to practice JavaScript.",
-      image: rubberduck,
-    video: rubberDuckVideo
-    },
 
-    {
-      title: "Online Book Store",
-      category: "React JS • Node.js • MySQL",
-      description:
-        "A full-stack bookstore where I focused on the database, admin and login pages and overall UI design.",
-      image: novellinurkka,
-    video: firstProjectVideo
-    },
-
-    {
-      title: "Mini Yahtzee",
-      category: "React Native • Expo",
-      description:
-        "A school project featuring a mobile Yahtzee-style game built with React Native and Expo.",
-      image: yahtzee,
-    video: miniYahtzeeVideo
-    },
-
-    {
-      title: "Weather App",
-      category: "HTML • CSS • JavaScript • API",
-      description:
-        "A weather application that fetches and displays live weather data.",
-      image: weatherApp,
-    video: weatherAppVideo
-    },
-
-    {
-      title: "Exercise App",
-      category: "React Native • Expo",
-      description:
-        "A simple mobile application for browsing and tracking exercises.",
-      image: exercise,
-    video: exerciseAppVideo
-    }
-  ];
 
 
   const scrollCarousel = (direction) => {
@@ -173,9 +115,9 @@ function Projects() {
           className="work-carousel"
           ref={carouselRef}
         >
-          {projects.map((project, index) => (
+          {data.map((project, index) => (
             <ProjectCard
-              project={project}
+              data={project}
               key={index}
             />
           ))}
@@ -197,45 +139,43 @@ function Projects() {
 
       <div className="wireframe-section">
 
-        <div className="wireframe-heading">
+  <div className="wireframe-heading">
+    <span>UI / UX DESIGN</span>
+    <h2>Wireframes & Design</h2>
+    <p>
+      Early concepts and layouts I designed in Figma.
+    </p>
+  </div>
 
-          <span>UI / UX</span>
+  <div className="wireframe-grid">
 
-          <h2>Wireframes & Design</h2>
+    <div className="wireframe-card">
+      <img
+        src={figmaProjects}
+        alt="Figma projects and wireframes"
+        loading="lazy"
+      />
+    </div>
 
-          <p>
-            Some of the early concepts and layouts I designed in Figma
-          </p>
+    <div className="wireframe-card">
+      <img
+        src={shopFigma}
+        alt="Shop website wireframe"
+        loading="lazy"
+      />
+    </div>
 
-        </div>
+    <div className="wireframe-card">
+      <img
+        src={travelSite}
+        alt="Travel website design"
+        loading="lazy"
+      />
+    </div>
 
+  </div>
 
-        <div className="wireframe-grid">
-
-          <div className="wireframe-card">
-            <img
-              src={figmaProjects}
-              alt="Figma projects and wireframes"
-            />
-          </div>
-
-          <div className="wireframe-card">
-            <img
-              src={shopFigma}
-              alt="Shop website wireframe"
-            />
-          </div>
-
-          <div className="wireframe-card">
-            <img
-              src={travelSite}
-              alt="Application wireframe"
-            />
-          </div>
-
-        </div>
-
-      </div>
+</div>
 
     </section>
   );
