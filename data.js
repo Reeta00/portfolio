@@ -13,6 +13,9 @@
   import exercise from "/src/assets/exercise.png";
   import exerciseAppVideo from "/src/assets/ExerciseApp.mp4";
   
+import birthday from "/src/assets/hbd.png";
+  import hBd from "/src/assets/hbd.mp4";
+
   const data = [
     {
       title: "Counter App",
@@ -39,6 +42,15 @@
         "A school project featuring a mobile Yahtzee-style game built with React Native and Expo.",
       image: yahtzee,
     video: miniYahtzeeVideo
+    },
+
+        {
+      title: "Interactive Birthday Card",
+      category: "HTML • CSS • JavaScript",
+      description:
+        "A virtual interactive birthday card I made using html, JavaScript and css. ",
+      image: birthday,
+    video: hBd
     },
 
     {
